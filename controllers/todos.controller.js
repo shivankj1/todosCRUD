@@ -1,10 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const { writeTodos, readTodos } = require("../data/todosStore");
 
-
-export const create: RequestHandler<{}, Todo | ErrorBody, CreateBody> = async (req, res) => { … };
-
-
 exports.create = asyncHandler(async (req, res) => {
   const payload = req.body;
   if (!payload)
